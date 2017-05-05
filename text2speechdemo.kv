@@ -1,0 +1,31 @@
+#:kivy 1.9.1
+<Text2SpeechDemo>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+
+        TextInput:
+            id: notification_text
+            text: 'Put message here'
+
+        Button:
+            text: 'Read'
+            size_hint_y: 0.2
+            on_press: root.do_read()
+
+<ErrorPopup>:
+    size_hint: .7, .4
+    title: "Error"
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 20
+
+        Label:
+            size_hint_y: 0.4
+            text: "Error."
+        Button:
+            text: 'Dismiss'
+            size_hint_y: 0.4
+            on_press: root.dismiss()
